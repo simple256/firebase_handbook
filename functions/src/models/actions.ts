@@ -1,6 +1,4 @@
-import * as mongoose from 'mongoose';
-
-const Schema = mongoose.Schema;
+import {Schema, model} from 'mongoose';
 
 const ActionsSchema = new Schema({
   title: {
@@ -9,4 +7,4 @@ const ActionsSchema = new Schema({
   },
 });
 
-mongoose.model('Actions', ActionsSchema);
+model('Actions', ActionsSchema);

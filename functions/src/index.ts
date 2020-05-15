@@ -6,7 +6,7 @@ import { firebaseAdminConfig } from './private/firebaseAdminConfig';
 
 const app = express();
 
-mongoose.connect(<string>process.env.DB_CONNECTION, { useUnifiedTopology: true });
+await mongoose.connect(<string>process.env.DB_CONNECTION, { useUnifiedTopology: true });
 
 admin.initializeApp({
   // @ts-ignore
