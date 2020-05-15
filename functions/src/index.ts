@@ -1,13 +1,19 @@
 import * as functions from 'firebase-functions';
 import * as admin  from 'firebase-admin';
 import * as express from 'express';
-
-// const serviceAccount = require('../../../private/adminAccount');
+import * as mongoose from 'mongoose';
+import { firebaseAdminConfig } from './private/firebaseAdminConfig';
 
 const app = express();
 
+mongoose.connect(
+    <string>process.env.DB_CONNECTION,
+    { useUnifiedTopology: true }
+    )
+
 admin.initializeApp({
-    // credential: admin.credential.cert(serviceAccount),
+    // @ts-ignore
+    credential: admin.credential.cert(firebaseAdminConfig),
     databaseURL: 'https://handbook-cc5cb.firebaseio.com'
 });
 
