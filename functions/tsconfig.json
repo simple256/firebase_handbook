@@ -6,10 +6,15 @@
     "outDir": "lib",
     "sourceMap": true,
     "strict": true,
-    "target": "es2017"
+    "target": "es2020",
+    "moduleResolution": "node"
   },
+  "lib": ["es2020"],
   "compileOnSave": true,
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

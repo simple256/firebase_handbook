@@ -2,5 +2,5 @@
 const jwtSecret = 'Strong secret phrase from HANDBOOK project.';
 
 export default {
-    jwtSecret
-}
+  jwtSecret,
+};
